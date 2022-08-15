@@ -95,7 +95,7 @@
 
       </div>
       <h1>Make an Appointment</h1>
-     <form>
+      <form id="appointment_form" >
       <div class="form-row">
         <div class="col">
         <div class="form-group">
@@ -174,20 +174,16 @@
         notify("Your appointment has been submitted!", "success") //i should put this in a fxn
       })*/
 
-      function successful() {
-        notify("Your appointment has been submitted!", "success");
-        console.log("test");
-      }//didn't work
+      function successful(e) {
+        e.preventDefault();
+        notify('Your appointment has been submitted!', 'success');
+      }
 
-      /*const form = document.querySelector('form')
-      form.onsubmit = (e) => {
-        e.preventDefault()
-        notify("Your appointment has been submitted!", "success");
-        console.log("test")
-      }*/
+      const form = document.querySelector('#appointment_form'); // or use getElementById, or anything else
+      form.addEventListener('submit', successful);//how to not have the pop up show until all rq fields are filled out:
+      //add an id name to the form, in this case appointment_form
 
-      const form = document.querySelector("form") // or use getElementById, or anything else
-      form.addEventListener("submit", successful);
+
 
       function notify(msg, msgType) {
         notie.alert({

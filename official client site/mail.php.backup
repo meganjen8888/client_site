@@ -1,0 +1,19 @@
+<?php
+//get data from form  
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
+$email= $_POST['emailaddress'];
+$phone= $_POST['phonenumber'];
+$date= $_POST['appointment_date'];
+$message= $_POST['situation'];
+$to = "meganjen12345@gmail.com";
+$subject = "Mail From website";
+$txt = "Name = " . ($firstname." ".$lastname) . "\r\n  Email = " . $email . "\r\n Phone Number = ". $phone . "\r\n Message =" . $message;
+$headers = "From: noreply@yoursite.com" . "\r\n" .
+"CC: somebodyelse@example.com";
+if($email!=NULL){
+    mail($to,$subject,$txt,$headers);
+}
+//redirect
+header("Location:thankyou.html");
+?>

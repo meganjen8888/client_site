@@ -7,5 +7,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="vanillajs-datepicker" level="application" />
     <orderEntry type="library" name="notie" level="application" />
+    <orderEntry type="library" name="smtp" level="application" />
   </component>
 </module>

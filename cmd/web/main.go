@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/alexedwards/scs/v2"
-	"github.com/meganjen8888/acupuncture/pkg/config"
-	"github.com/meganjen8888/acupuncture/pkg/handlers"
-	"github.com/meganjen8888/acupuncture/pkg/render"
+	"github.com/meganjen8888/acupuncture/internal/config"
+	"github.com/meganjen8888/acupuncture/internal/handlers"
+	"github.com/meganjen8888/acupuncture/internal/render"
 	"log"
 	"net/http"
 	"time"
